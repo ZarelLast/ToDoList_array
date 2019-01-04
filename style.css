@@ -1,0 +1,93 @@
+body{
+	margin:0;
+	padding:0;
+	background-image:url("background.png");
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center;
+	background-attachment:fixed;
+}
+ul li{
+	list-style-type:none;
+}
+.posted{
+	width:200px;
+	float:left;
+    font-family: 'Roboto', sans-serif;
+}
+.text{
+	overflow:auto;
+	max-height:80px;
+	min-height:20px;
+	margin:0px;
+}
+.kotak{
+	color:white;
+	width:280px;
+	height:auto;
+	background-color:#2f2f2f;
+	padding:5px;
+	margin:0px;
+	border-radius:5px;
+	position:absolute;
+	bottom:2%;
+	right:2%;
+	clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 95% 95%, 95% 100%, 90% 95%, 0 95%);
+}
+.btn-del{
+	background:none;
+	color:white;
+	border-radius:50%;
+	height:20px;
+	width:20px;
+	padding:0px 2px 0px 2px;
+	border:none;
+	float:none;
+}
+.btn-del:hover{
+	border:1px solid white;
+}
+form{
+	left:20px;
+	position:relative;
+}
+#nomor{
+	padding:0px;
+	margin:5px;
+	width:auto;
+	float:none;
+    font-family: 'Roboto', sans-serif;
+}
+#input-todo{
+	background:none;
+	border:none;
+	float:left;
+	border-bottom:2px solid white;
+	color:white;
+}
+.jam{
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform: translateX(-50%) translateY(-50%);
+	color:#ffffff;
+	font-size:80px;
+	font-family: 'Roboto', sans-serif;
+}
+#s{
+	position:fixed;
+	left:59%;
+	top:53%;
+	transform: translateX(-50%) translateY(-50%);
+	color:#ffffff;
+	font-size:20px;
+	font-family: 'Roboto', sans-serif;
+}
+#add-btn{
+	background:none;
+	border:none;
+	color:#ffffff;
+}
+input[type=checkbox]:checked + label.strike{
+	text-decoration:line-through;
+}
