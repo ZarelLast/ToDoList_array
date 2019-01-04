@@ -64,6 +64,7 @@ form{
 	float:left;
 	border-bottom:2px solid white;
 	color:white;
+	margin-bottom:10px;
 }
 .jam{
 	position:absolute;
@@ -88,6 +89,6 @@ form{
 	border:none;
 	color:#ffffff;
 }
-input[type=checkbox]:checked + label.strike{
+input:checked + label.strike{
 	text-decoration:line-through;
 }
