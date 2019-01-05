@@ -12,7 +12,7 @@ function render(){
 	listDOM.innerHTML = "";
 	while(index<todos.length){
 		console.log(index);
-		listDOM.innerHTML += '<li><div class="posted"><input id="box" type="checkbox" />&nbsp<label class="strike">'+ todos[index]+'</label></div><button class="btn-del" onclick=hapus('+index+')><span>&times</span></button></li>';
+		listDOM.innerHTML += "<li><div class='posted'><input id='box' type='checkbox' />&nbsp<label class='strike'>"+todos[index]+"</label></div><button class='btn-del' onclick=hapus("+index+")><span>&times</span></button></li>";
 		index = index + 1;
 	}
 }
@@ -32,7 +32,7 @@ function hapus(index){
 	localStorage.setItem('todos',JSON.stringify(todos));
 }
 const nomorDOM = document.getElementById('nomor');
-nomorDOM.innerHTML += todos.length+' To Do';
+nomorDOM.innerHTML += todos.length+" To Do"
 
 function showTime(){
 	var date = new Date();
