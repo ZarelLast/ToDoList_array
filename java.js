@@ -6,9 +6,9 @@ const hardisk = window.localStorage;
 
 const data = JSON.parse(hardisk.getItem('todos'));
 console.log(data);
-if(todos>1){
+if(todos>0){
 	todos = data;
-};
+}
 function render(){
 	let index = 0;
 	listDOM.innerHTML = "";
