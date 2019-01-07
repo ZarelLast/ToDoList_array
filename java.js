@@ -7,6 +7,7 @@ const hardisk = window.localStorage;
 const data = JSON.parse(hardisk.getItem('todos'));
 console.log(data);
 
+
 function render(){
 	let index = 0;
 	listDOM.innerHTML = "";
@@ -15,7 +16,7 @@ function render(){
 		listDOM.innerHTML += "<li><div class='posted'><input id='box' type='checkbox' />&nbsp<label class='strike'>"+todos[index]+"</label></div><button class='btn-del' onclick=hapus("+index+")><span>&times</span></button></li>";
 		index = index + 1;
 	}
-}
+};
 
 addDOM.addEventListener('click',function(){
 	const todo = inputDOM.value;
@@ -23,19 +24,18 @@ addDOM.addEventListener('click',function(){
 	console.log(todos);
 	render();
 	hardisk.setItem('todos',JSON.stringify(todos));
-})
+});
 
 function hapus(index){
 	console.log(index); 
 	todos.splice(index, 1)
 	render();
 	hardisk.setItem('todos',JSON.stringify(todos));
-}
+};
 const nomorDOM = document.getElementById('nomor');
 nomorDOM.innerHTML += todos.length+" To Do";
 
 render();
-todos = data;
 
 function showTime(){
 	var date = new Date();
@@ -59,6 +59,6 @@ function showTime(){
 	document.getElementById("MyClockDisplay").innerText = time;
 	document.getElementById("MyClockDisplay").textContent = time;
 	setTimeout(showTime, 1000);
-	}	
+	};	
 
 showTime();
