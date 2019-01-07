@@ -6,7 +6,6 @@ const hardisk = window.localStorage;
 
 const data = JSON.parse(hardisk.getItem('todos'));
 console.log(data);
-todos = data;
 
 function render(){
 	let index = 0;
@@ -15,6 +14,7 @@ function render(){
 		console.log(index);
 		listDOM.innerHTML += "<li><div class='posted'><input id='box' type='checkbox' />&nbsp<label class='strike'>"+todos[index]+"</label></div><button class='btn-del' onclick=hapus("+index+")><span>&times</span></button></li>";
 		index = index + 1;
+		todos = data;
 	}
 }
 
