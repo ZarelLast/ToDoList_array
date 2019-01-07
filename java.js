@@ -1,4 +1,4 @@
-let todos = ["test"];
+let todos = [];
 const listDOM = document.getElementById('list');
 const inputDOM = document.getElementById('input-todo');
 const addDOM = document.getElementById('add-btn');
@@ -27,18 +27,18 @@ addDOM.addEventListener('click',function(){
 	todos.push(todo);
 	console.log(todos);
 	hardisk.setItem('todos',JSON.stringify(todos));
-	nomorDOM.innerHTML = data.length+" To Do";
+	nomorDOM.innerHTML = todos.length+" To Do";
 	render();
 });
 function hapus(index){
 	console.log(index); 
 	todos.splice(index, 1)
-	nomorDOM.innerHTML = data.length+" To Do";
+	nomorDOM.innerHTML = todos.length+" To Do";
 	hardisk.setItem('todos',JSON.stringify(todos));
 	render();
 };
 render();
-nomorDOM.innerHTML += data.length+" To Do";
+nomorDOM.innerHTML += todos.length+" To Do";
 
 function showTime(){
 	var date = new Date();
