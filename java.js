@@ -8,9 +8,11 @@ const nomorDOM = document.getElementById('nomor');
 const data = JSON.parse(hardisk.getItem('todos'));
 console.log(data);
 if(data.length == 0){
+	todos = todos;
+}else{
 	todos = data;
 }
-render();
+
 function render(){
 	let index = 0;
 	listDOM.innerHTML = "";
@@ -20,28 +22,23 @@ function render(){
 		index = index + 1;
 	}
 };
-render();
 addDOM.addEventListener('click',function(){
 	const todo = inputDOM.value;
 	todos.push(todo);
 	console.log(todos);
-	render();
 	hardisk.setItem('todos',JSON.stringify(todos));
-	nomorDOM.innerHTML += data.length+" To Do";
+	nomorDOM.innerHTML = data.length+" To Do";
 	render();
 });
-render();
 function hapus(index){
 	console.log(index); 
 	todos.splice(index, 1)
-	render();
+	nomorDOM.innerHTML = data.length+" To Do";
 	hardisk.setItem('todos',JSON.stringify(todos));
-	nomorDOM.innerHTML += data.length+" To Do";
 	render();
 };
 render();
 nomorDOM.innerHTML += data.length+" To Do";
-render();
 
 function showTime(){
 	var date = new Date();
