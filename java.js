@@ -17,7 +17,7 @@ function render(){
 	}
 	todos = data;
 }
-
+todos = data;
 addDOM.addEventListener('click',function(){
 	const todo = inputDOM.value;
 	todos.push(todo);
