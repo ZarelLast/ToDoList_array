@@ -35,6 +35,7 @@ const nomorDOM = document.getElementById('nomor');
 nomorDOM.innerHTML += todos.length+" To Do";
 
 render();
+todos = data;
 
 function showTime(){
 	var date = new Date();
