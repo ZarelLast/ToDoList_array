@@ -4,7 +4,6 @@ const inputDOM = document.getElementById('input-todo');
 const addDOM = document.getElementById('add-btn');
 const hardisk = window.localStorage;
 
-
 function render(){
 	let index = 0;
 	listDOM.innerHTML = "";
@@ -20,7 +19,8 @@ addDOM.addEventListener('click',function(){
 	todos.push(todo);
 	console.log(todos);
 	render();
-	})
+	hardisk.setItem('todos',JSON.stringify(todos));
+})
 
 function hapus(index){
 	console.log(index); 
