@@ -33,7 +33,7 @@ function hapus(index){
 	hardisk.setItem('todos',JSON.stringify(todos));
 };
 const nomorDOM = document.getElementById('nomor');
-nomorDOM.innerHTML += todos.length+" To Do";
+nomorDOM.innerHTML += data.length+" To Do";
 
 render();
 
