@@ -15,22 +15,23 @@ function render(){
 		listDOM.innerHTML += "<li><div class='posted'><input id='box' type='checkbox' />&nbsp<label class='strike'>"+todos[index]+"</label></div><button class='btn-del' onclick=hapus("+index+")><span>&times</span></button></li>";
 		index = index + 1;
 	}
-};
+}
 
 addDOM.addEventListener('click',function(){
 	const todo = inputDOM.value;
 	todos.push(todo);
 	console.log(todos);
-	hardisk.setItem('todos',JSON.stringify(todos));
 	render();
-});
+	todos = data;
+	hardisk.setItem('todos',JSON.stringify(todos));
+})
 
 function hapus(index){
 	console.log(index); 
 	todos.splice(index, 1)
 	render();
 	hardisk.setItem('todos',JSON.stringify(todos));
-};
+}
 const nomorDOM = document.getElementById('nomor');
 nomorDOM.innerHTML += data.length+" To Do";
 
