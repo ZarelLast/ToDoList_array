@@ -3,10 +3,11 @@ const listDOM = document.getElementById('list');
 const inputDOM = document.getElementById('input-todo');
 const addDOM = document.getElementById('add-btn');
 const hardisk = window.localStorage;
+const nomorDOM = document.getElementById('nomor');
 
 const data = JSON.parse(hardisk.getItem('todos'));
 console.log(data);
-if(data === null || todos === undefined){
+if(data.length==0){
 	todos = todos;
 }else{
 	todos = data;
@@ -24,24 +25,22 @@ addDOM.addEventListener('click',function(){
 	const todo = inputDOM.value;
 	todos.push(todo);
 	console.log(todos);
+	nomorDOM.innerHTML = data.length+" To Do";
 	render();
 	hardisk.setItem('todos',JSON.stringify(todos));
 	const nomorDOM = document.getElementById('nomor');
-	nomorDOM.innerHTML += todos.length+" To Do";
 });
 
 function hapus(index){
 	console.log(index); 
 	todos.splice(index, 1)
+	nomorDOM.innerHTML = data.length+" To Do";
 	render();
 	hardisk.setItem('todos',JSON.stringify(todos));
 	const nomorDOM = document.getElementById('nomor');
-	nomorDOM.innerHTML += todos.length+" To Do";
 };
-const nomorDOM = document.getElementById('nomor');
-nomorDOM.innerHTML += todos.length+" To Do";
-
 render();
+nomorDOM.innerHTML += data.length+" To Do";
 
 function showTime(){
 	var date = new Date();
