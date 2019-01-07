@@ -1,11 +1,11 @@
-let todos = [];
+let todos = ["coba"];
 const listDOM = document.getElementById('list');
 const inputDOM = document.getElementById('input-todo');
 const addDOM = document.getElementById('add-btn');
+const hardisk = window.localStorage;
 
-const data = JSON.parse(localStorage.getItem('todos'));
+const data = JSON.parse(hardisk.getItem('todos'));
 console.log(data);
-todos = data;
 
 function render(){
 	let index = 0;
@@ -22,17 +22,19 @@ addDOM.addEventListener('click',function(){
 	todos.push(todo);
 	console.log(todos);
 	render();
-	localStorage.setItem('todos',JSON.stringify(todos));
+	hardisk.setItem('todos',JSON.stringify(todos));
 })
 
 function hapus(index){
 	console.log(index); 
 	todos.splice(index, 1)
 	render();
-	localStorage.setItem('todos',JSON.stringify(todos));
+	hardisk.setItem('todos',JSON.stringify(todos));
 }
 const nomorDOM = document.getElementById('nomor');
-nomorDOM.innerHTML += todos.length+" To Do"
+nomorDOM.innerHTML += todos.length+" To Do";
+
+render();
 
 function showTime(){
 	var date = new Date();
@@ -59,4 +61,3 @@ function showTime(){
 	}	
 
 showTime();
-render();
