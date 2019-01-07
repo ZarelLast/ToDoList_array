@@ -6,8 +6,6 @@ const hardisk = window.localStorage;
 
 const data = JSON.parse(hardisk.getItem('todos'));
 console.log(data);
-render();
-todos = data;
 
 function render(){
 	let index = 0;
@@ -18,7 +16,6 @@ function render(){
 		index = index + 1;
 	}
 };
-render();
 
 addDOM.addEventListener('click',function(){
 	const todo = inputDOM.value;
