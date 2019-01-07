@@ -7,6 +7,7 @@ const hardisk = window.localStorage;
 const data = JSON.parse(hardisk.getItem('todos'));
 console.log(data);
 todos += data;
+JSON.parse(todos);
 
 
 function render(){
