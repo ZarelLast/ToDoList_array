@@ -4,6 +4,9 @@ const inputDOM = document.getElementById('input-todo');
 const addDOM = document.getElementById('add-btn');
 const hardisk = window.localStorage;
 
+const data = JSON.parse(hardisk.getItem('todos'));
+console.log(data);
+todos += data;
 
 
 function render(){
