@@ -26,6 +26,8 @@ addDOM.addEventListener('click',function(){
 	console.log(todos);
 	render();
 	hardisk.setItem('todos',JSON.stringify(todos));
+	const nomorDOM = document.getElementById('nomor');
+	nomorDOM.innerHTML += todos.length+" To Do";
 });
 
 function hapus(index){
@@ -33,6 +35,8 @@ function hapus(index){
 	todos.splice(index, 1)
 	render();
 	hardisk.setItem('todos',JSON.stringify(todos));
+	const nomorDOM = document.getElementById('nomor');
+	nomorDOM.innerHTML += todos.length+" To Do";
 };
 const nomorDOM = document.getElementById('nomor');
 nomorDOM.innerHTML += todos.length+" To Do";
