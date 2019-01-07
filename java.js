@@ -22,7 +22,6 @@ addDOM.addEventListener('click',function(){
 	todos.push(todo);
 	console.log(todos);
 	render();
-	todos = data;
 	hardisk.setItem('todos',JSON.stringify(todos));
 })
 
