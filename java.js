@@ -1,4 +1,4 @@
-let todos = ["coba","test"];
+let todos = [];
 const listDOM = document.getElementById('list');
 const inputDOM = document.getElementById('input-todo');
 const addDOM = document.getElementById('add-btn');
