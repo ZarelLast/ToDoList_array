@@ -7,9 +7,7 @@ const nomorDOM = document.getElementById('nomor');
 
 const data = JSON.parse(hardisk.getItem('todos'));
 console.log(data);
-if(data.length == 0){
-	console.log(data);
-}else{
+if(data.length > 0){
 	todos = data;
 }
 function render(){
@@ -25,22 +23,23 @@ addDOM.addEventListener('click',function(){
 	const todo = inputDOM.value;
 	todos.push(todo);
 	console.log(todos);
-	nomorDOM.innerHTML = data.length+" To Do";
 	render();
 	hardisk.setItem('todos',JSON.stringify(todos));
-	const nomorDOM = document.getElementById('nomor');
+	nomorDOM.innerHTML = data.length+" To Do";
+	render();
 });
 
 function hapus(index){
 	console.log(index); 
 	todos.splice(index, 1)
-	nomorDOM.innerHTML = data.length+" To Do";
 	render();
 	hardisk.setItem('todos',JSON.stringify(todos));
-	const nomorDOM = document.getElementById('nomor');
+	nomorDOM.innerHTML = data.length+" To Do";
+	render();
 };
 render();
 nomorDOM.innerHTML += data.length+" To Do";
+render();
 
 function showTime(){
 	var date = new Date();
