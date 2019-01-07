@@ -15,7 +15,6 @@ function render(){
 		listDOM.innerHTML += "<li><div class='posted'><input id='box' type='checkbox' />&nbsp<label class='strike'>"+todos[index]+"</label></div><button class='btn-del' onclick=hapus("+index+")><span>&times</span></button></li>";
 		index = index + 1;
 	}
-	todos = data;
 }
 
 addDOM.addEventListener('click',function(){
@@ -24,6 +23,7 @@ addDOM.addEventListener('click',function(){
 	console.log(todos);
 	render();
 	hardisk.setItem('todos',JSON.stringify(todos));
+	todos = data;
 })
 
 function hapus(index){
